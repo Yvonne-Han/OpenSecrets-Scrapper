@@ -3,7 +3,7 @@ library(readr)
 library(DBI)
 
 #### Write functions to import data ####
-# Candidates #
+# Candidates 
 import_cands <- function(cands_file) {
   file_path = paste("raw_bulk_data/", cands_file, ".txt", sep = "")
   cands_lines <- read_lines(file_path)
@@ -14,12 +14,12 @@ import_cands <- function(cands_file) {
     read_delim(delim = "|", col_names = c("cycle", "feccandid", "cid", "firstlastp", 
                                           "party", "distidrunfor", "distidcurr", 
                                           "currcand", "cyclecand", "crpico", "recipcode", "nopacs"), 
-               col_types = "cccccccccccc")
+               col_types = "cccccccccccc") %>%
   return(cands)
 }
 
 
-# FEC Committees # 
+# FEC Committees 
 import_cmtes <- function(cmtes_file) {
   file_path = paste("raw_bulk_data/", cmtes_file, ".txt", sep = "")
   cmtes_lines <- read_lines(file_path)
@@ -43,7 +43,7 @@ import_cmtes <- function(cmtes_file) {
 }
 
 
-# Pacs to candidates # 
+# Pacs to candidates 
 import_pacs <- function(pacs_file) {
   file_path = paste("raw_bulk_data/", pacs_file, ".txt", sep = "")
   pacs_lines <- read_lines(file_path)
@@ -68,7 +68,7 @@ import_pacs <- function(pacs_file) {
 }
 
 
-# Pacs to Pacs #
+# Pacs to Pacs 
 import_pac_other <- function(pac_other_file) {
   file_path = paste("raw_bulk_data/", pac_other_file, ".txt", sep = "")
   pac_other_lines <- read_lines(file_path)
@@ -96,10 +96,10 @@ import_pac_other <- function(pac_other_file) {
 
 
 
-# Individual contributions #
+# Individual contributions 
 import_indivs <- function(indivs_file) {
   file_path = paste("raw_bulk_data/", indivs_file, ".txt", sep = "")
-  indivs_lines <- read_lines(file_path, skip = 3000000, n_max = 3000000)
+  indivs_lines <- read_lines(file_path)
   indivs <- indivs_lines %>%
     iconv("latin1", "UTF-8") %>%            # Correct for unexpected encoding (if any)
     gsub("\\|\\,,", "\\,||,", .) %>%        # if two consecutive commas exist, add delimeter and replace with ,||, 
@@ -127,4 +127,54 @@ import_indivs <- function(indivs_file) {
   return(indivs)
 }
 
+import_indivs("indivs16")
 
+#### Create tables and save them on the server ####
+Sys.setenv(PGHOST = "10.101.13.99", PGDATABASE = "crsp")
+Sys.setenv(PGUSER = "yanzih1", PGPASSWORD = "temp_20190711")
+
+pg <- dbConnect(RPostgres::Postgres())
+rs <- dbExecute(pg, "SET search_path TO mschabus")
+
+# Candidates 
+for (year in c(12, 14, 16, 18)) {
+  cands_file_name = paste("cands", year, sep = "")
+  cands_file <- import_cands(cands_file_name)
+  dbWriteTable(pg, "cands", cands_file, overwrite = FALSE, append = TRUE, row.names = FALSE)
+}
+
+rs <- dbExecute(pg, "ALTER TABLE cands OWNER TO mschabus")
+
+
+# FEC Committees 
+for (year in c(12, 14, 16, 18)) {
+  cmtes_file_name = paste("cmtes", year, sep = "")
+  cmtes_file <- import_cmtes(cmtes_file_name)
+  dbWriteTable(pg, "cmtes", cmtes_file, overwrite = FALSE, append = TRUE, row.names = FALSE)
+}
+
+rs <- dbExecute(pg, "ALTER TABLE cmtes OWNER TO mschabus")
+
+
+# Pacs to candidates 
+for (year in c(12, 14, 16, 18)) {
+  pacs_file_name = paste("pacs", year, sep = "")
+  pacs_file <- import_pacs(pacs_file_name)
+  dbWriteTable(pg, "pacs", pacs_file, overwrite = FALSE, append = TRUE, row.names = FALSE)
+}
+
+rs <- dbExecute(pg, "ALTER TABLE pacs OWNER TO mschabus")
+
+
+# Pacs to others
+for (year in c(12, 14, 16, 18)) {
+  pac_other_file_name = paste("pac_other", year, sep = "")
+  pac_other_file <- import_pac_other(pac_other_file_name)
+  dbWriteTable(pg, "pac_other", pac_other_file, overwrite = FALSE, append = TRUE, row.names = FALSE)
+}
+
+rs <- dbExecute(pg, "ALTER TABLE pac_other OWNER TO mschabus")
+
+
+# Indivs have a problem of importing because it exceeds the integer range
+# Todo: Find a solution to process this in chunks
