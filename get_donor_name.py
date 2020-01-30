@@ -7,7 +7,7 @@ import csv
 
 # take a string as input and output the keywords of comnam
 def clean_comnam(comnam):
-    suffixes = r"\s(\bco\b\s?|\bcorp\b\s?|\bcorporation\b\s?|\bgroup\b\s?|\bltd\b\s?|\binc\b\s?|\bdel\b\s{0}|\bnew\b\s{0})"
+    suffixes = r"\s(\bco\b|\bcorp\b|\bcorporation\b|\bgroup\b|\bltd\b|\binc\b|\bdel\b\s{0}|\bnew\b\s{0})"
     comnam_no_suffixes = re.sub(suffixes, "", comnam.lower())
     single_letter = re.compile(r'\b([a-z]) (?=[a-z]\b)', re.I)
     comnam_compiled = re.sub(single_letter, r'\g<1>', comnam_no_suffixes)
