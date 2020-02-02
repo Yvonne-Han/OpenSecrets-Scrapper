@@ -47,4 +47,4 @@ for i in range(len(ticker_comnams)):
         ticker_comnams.loc[i, 'candidates'] = ", ".join(candidates)
     
     # export to ticker_comnams_donors.csv
-    ticker_comnams.to_csv("ticker_comnams_donors.csv", encoding='utf-8', index=False)
+    ticker_comnams.to_csv("MapLight/ticker_comnams_donors.csv", encoding='utf-8', index=False)
