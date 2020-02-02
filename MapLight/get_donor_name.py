@@ -14,7 +14,7 @@ def clean_comnam(comnam):
     return re.sub("\s", "%20", comnam_compiled)
 
 # import ticker_comnam and create two new columns
-ticker_comnams = pd.read_csv("ticker_comname.csv")
+ticker_comnams = pd.read_csv("~/Campaign-Finances/ticker_comname.csv")
 ticker_comnams['donor_name'] = None
 ticker_comnams['candidates'] = None
 
@@ -47,4 +47,4 @@ for i in range(len(ticker_comnams)):
         ticker_comnams.loc[i, 'candidates'] = ", ".join(candidates)
     
     # export to ticker_comnams_donors.csv
-    ticker_comnams.to_csv("MapLight/ticker_comnams_donors.csv", encoding='utf-8', index=False)
+    ticker_comnams.to_csv("ticker_comnams_donors.csv", encoding='utf-8', index=False)
