@@ -23,7 +23,7 @@ def get_org_id(some_text, api_key):
         api_response_dict = xmltodict.parse(api_response.content)
         
         if isinstance(api_response_dict['response']['organization'], list):
-            return ', '.join(item['@orgid'] for item in api_response_dict['response']['organization'])
+            return '; '.join((', '.join(item.values())) for item in api_response_dict['response']['organization'])
         
         else:
             return api_response_dict['response']['organization']['@orgid']
