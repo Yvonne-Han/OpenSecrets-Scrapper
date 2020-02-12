@@ -67,7 +67,7 @@ ticker_comnam_id.to_csv("ticker_comnam_id.csv", encoding='utf-8', index=False)
 
 # Second attempt: use the first word in the comnam to get a candidate list of possible matches
 # To allow for manual judgment, I put all results in candidates no matter how many are returned for each query
-# Found 380/398 ids
+# Found 480/498 ids
 ticker_comnam_id_second = pd.read_csv("ticker_comnam_id.csv")
 
 for i in range(len(ticker_comnam_id_second)):
