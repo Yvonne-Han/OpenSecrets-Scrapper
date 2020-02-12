@@ -75,7 +75,7 @@ BOSTON SCIENTIFIC CORP,BSX,D000021878,
 BORGWARNER INC,BWA,D000067815,
 BOSTON PROPERTIES INC,BXP,D000032060,
 CITIGROUP INC,C,D000000071,
-C A INC,CA,,
+C A INC,CA,,"D000060210, Broadcom Inc (CA is an affiliate of Broadcom)"
 CONAGRA BRANDS INC,CAG,D000000242,
 CARDINAL HEALTH INC,CAH,D000021892,
 CATERPILLAR INC,CAT,D000000352,
@@ -264,7 +264,7 @@ CARMAX INC,KMX,D000021895,
 COCA COLA CO,KO,,"D000045873, Coca-Cola Bottlers' Assn; D000032712, Coca-Cola Bottling                      ; D000071873, Coca-Cola Bottling Co Consolidated; D000025010, Coca-Cola Bottling Co United            ; D000000212, Coca-Cola Co; D000065473, Coca-Cola Enterprises; D000065622, Coca-Cola Puerto Rico Bottlers; D000055134, Ozarks Coca-Cola Bottling"
 MICHAEL KORS HOLDINGS LIMITED,KORS,,"D000060272, Bauch & Michaels; D000060489, C Michael Davenport Inc; D000043389, Carmichael & Neal                       ; D000027561, Michael Baker Corp                      ; D000071704, Michael Baker International; D000072056, Michael Best Strategies; D000035846, Michael Burgess for Congress            ; D000035847, Michael Companies                       ; D000035848, Michael Flora & Assoc                   ; D000035850, Michael Morse Pc                        ; D000062443, Michael Pine & Assoc; D000035851, Michael Skloff Music                    ; D000053741, Michael Stapleton Assoc; D000062444, Michael Torrey Assoc; D000062445, Michael Wolkowitz LLC; D000035853, Michael, Best & Friedrich               ; D000042000, Michaels Stores; D000062582, NAI Michael Co"
 KROGER COMPANY,KR,D000027084,
-KOHLS CORP,KSS,,
+KOHLS CORP,KSS,D000042695,
 KANSAS CITY SOUTHERN,KSU,D000026944,
 LOEWS CORP,L,,"D000000207, Loews Corp                              ; D000053855, Loews Public Affairs Services; D000062198, Loews Regency Hotel"
 L BRANDS INC,LB,,"D000043289, Imperial Brands; D000000225, L Brands; D000042727, Newell Brands; D000072111, Parallel Brands"
@@ -293,7 +293,7 @@ MATTEL INC,MAT,D000000571,
 MCDONALDS CORP,MCD,D000000373,
 MICROCHIP TECHNOLOGY INC,MCHP,D000070999,
 MCKESSON H B O C INC,MCK,D000022105,
-MOODYS CORP,MCO,,
+MOODYS CORP,MCO,D000043203,
 MONDELEZ INTERNATIONAL INC,MDLZ,D000067057,
 MEDTRONIC PLC,MDT,D000022110,
 METLIFE INC,MET,,"D000023377, Metlife Bank; D000000172, MetLife Inc"
@@ -363,7 +363,7 @@ PERKINELMER INC,PKI,D000055352,
 PROLOGIS INC,PLD,D000044228,
 PHILIP MORRIS INTERNATIONAL INC,PM,D000055403,
 P N C FINANCIAL SERVICES GRP INC,PNC,,"D000028396, PNC Bank Corp"
-PENTAIR PLC,PNR,,
+PENTAIR PLC,PNR,,"D000067605, Pentair Ltd"
 PINNACLE WEST CAPITAL CORP,PNW,D000000658,
 P P G INDUSTRIES INC,PPG,D000028426,
 P P L CORP,PPL,,"D000031260, ABC Supply                              ; D000024023, American Supply Assn                    ; D000060128, Apple Finance Co; D000021754, Apple Inc; D000060129, Apple Oaks Partners; D000060130, Apple Physical Therapy; D000031583, Apple Realty                            ; D000031584, Apple REIT Companies                    ; D000047189, Apple Vacations; D000031585, Applied Biosystems                      ; D000031586, Applied Companies                       ; D000060131, Applied Data Trends; D000031587, Applied Development Co; D000047192, Applied Energetics; D000047193, Applied Enterprise Solutions; D000047195, Applied Global Technologies; D000058965, Applied Industrial Technologies Inc; D000024099, Applied Materials Inc                   ; D000047196, Applied Physical Electronics; D000047198, Applied Radar; D000066659, Applied Systems Intelligence; D000047199, Applied Technical Systems; D000043865, Applied Underwriters                    ; D000068939, Associated of Feed & Supply Co; D000024172, Association of Home Appliance Manufacturers; D000060422, Brake Supply Co; D000048078, Buffalo Supply; D000048081, Builders Supply Co ; D000060840, Crawford Plumbing Supply; D000032936, Crawford Supply                         ; D000060852, Criterion Supply; D000065278, Cubic Applications Inc; D000045421, Cubic Defense Applications; D000025515, Direct Supply Inc                       ; D000042050, Dr Pepper Snapple Group; D000025661, Electric Power Supply Assn              ; D000044072, Fair Oaks Farm Supply                   ; D000051386, Golden Apple Foundation; D000061601, Harry Cooper Supply; D000044206, Hd Supply                               ; D000026426, Healthcare Supply Chain Assn; D000061710, Hollywood Medical Supply; D000066869, Hughes Supply; D000052134, Industrial Supplies Co; D000052261, Interior Exterior Building Supply; D000052328, Interstate Gas Supply; D000044293, Johnstone Supply                        ; D000052921, Larrol Supply; D000053275, M&A Supply; D000027468, Mayer Electric Supply                   ; D000035809, Merfish Pipe & Supply                   ; D000062460, Midwest Veterinary Supply; D000027637, Mine Safety Appliances                  ; D000062477, Mine Supply Co; D000068529, MWI Veterinary Supply; D000054508, Natural Gas Supply Assn; D000036166, Network Appliance                       ; D000054982, Omar Medical Supplies; D000042226, Orchard Supply Hardware; D000042743, Petco Animal Supplies; D000022195, PPL Corp                                ; D000023397, PPL Montana; D000022897, PPL Susquehanna; D000018050, Prudential Overall Supply; D000036908, Quest Media & Supplies; D000022837, R&K Building Supplies; D000028516, Railway Supply Institute; D000036966, Rare Antibody Antigen Supply            ; D000036995, Red Apple Group                         ; D000056268, Refrigeration Supplies Distributor; D000071522, Ripple Labs; D000037128, Ripplewood Holdings                     ; D000063355, Sewart Supply; D000045188, Southern Pipe & Supply; D000063585, Summit Electric Supply; D000030206, SupplyCore Inc                          ; D000063699, Theisen's Supply; D000063753, Tractor Supply Co; D000063759, Transportation Equipment Supply Co; D000063809, U&W Industrial Supply; D000063840, United Central Industrial Supply; D000063854, Universal Builders Supply; D000029599, US Apple Assn                           ; D000063964, Ware Oil & Supply; D000031012, Western Nevada Supply                   ; D000070570, Western Oilfields Supply; D000058605, Wholesale Supplies Plus"
@@ -413,7 +413,7 @@ S & P GLOBAL INC,SPGI,D000035733,
 STAPLES INC,SPLS,D000029185,
 STERICYCLE INC,SRCL,D000029206,
 SEMPRA ENERGY,SRE,D000000415,
-SUNTRUST BANKS INC,STI,,
+SUNTRUST BANKS INC,STI,D000022269,
 STATE STREET CORP,STT,D000029194,
 SEAGATE TECHNOLOGY PLC,STX,D000022242,
 CONSTELLATION BRANDS INC,STZ,D000025112,
@@ -422,14 +422,14 @@ SKYWORKS SOLUTIONS INC,SWKS,,
 SOUTHWESTERN ENERGY CO,SWN,D000029143,
 SYNCHRONY FINANCIAL,SYF,D000067988,
 STRYKER CORP,SYK,,"D000034927, Jon Stryker Architecture                ; D000030157, Stryker Corp                            "
-SYMANTEC CORP,SYMC,,
+SYMANTEC CORP,SYMC,D000029309,
 SYSCO CORP,SYY,,"D000039893, Lankford-Sysco Food Service; D000030251, Sysco Corp                              ; D000057367, Syscom Inc"
 A T & T INC,T,,"D000068577, A Great American Brand LLC; D000046940, American Great Lakes Ports Assn; D000024001, American Rights at Work                 ; D000060176, AT Chadwick Co; D000043318, AT Kearney Inc; D000047617, Barat Education Foundation; D000024393, Boat Owners Assn of the US              ; D000043812, Capstrat Inc                            ; D000042602, Cargill Meat Solutions; D000048615, Children At Risk; D000066799, Chwat Group; D000025037, Colorado Assn of Wheat Growers          ; D000060744, Combat Veterans for Congress; D000049797, Council of the Great City Schools; D000050219, Doctors Hospital at Renaissance; D000025622, Eat 'n Park Restaurants                 ; D000068766, Fermat Capital Management; D000043126, Fiat Chrysler Automobiles; D000061299, Flat Creek Ranch; D000070193, Great America Cmte; D000069764, Great America PAC; D000026294, Great American Fund                     ; D000042279, Great Atlantic & Pacific Tea Co; D000034169, Great Clips                             ; D000061515, Great Far East; D000068624, Great Gulf Group; D000026295, Great Lakes Dredge & Dock               ; D000051471, Great Lakes Higher Education Corp; D000034170, Great Lakes Home Health                 ; D000021820, Great Lakes PAC; D000026296, Great Lakes Sugar Beet Growers Assn     ; D000051473, Great Lakes Towing Co; D000026297, Great Land PAC                          ; D000070433, Great North Star LLC; D000061516, Great Northern Manufacturing; D000064781, Great Northern Properties; D000034171, Great Plains Communications             ; D000069491, Great Point Partners; D000026300, Great River Energy                      ; D000041988, Great Southern Bancorp; D000051477, Great Southern Wood Preserving; D000061517, Great Western Drilling; D000061518, Great Western Mortgage; D000061519, Great Works; D000034261, Habitat Co                              ; D000043783, Habitat for Humanity                    ; D000044191, Hat Creek Enterprises                   ; D000036029, Icahn School of Medicine at Mount Sinai; D000061795, Influence At Work; D000056582, Inmarsat Government; D000043960, Inmarsat Inc                            ; D000051371, Inmarsat PLC; D000070896, JAT Capital Partners; D000061932, John T McCall Attorney At Law; D000027161, Leadership that Listens PAC             ; D000053260, Lutheran Theological Seminary at Phila; D000053616, Memorial Hospital at Gulfport; D000035841, Miami Heat                              ; D000035856, Michigan CAT                            ; D000071408, Middle Seat Consulting; D000027810, National Assn of Wheat Growers          ; D000022150, New Democrat Coalition                  ; D000000494, New Democrat Network                    ; D000068604, North American Meat Institute; D000036295, Nuclear Threat Initiative               ; D000070620, Offit Kurman Attorneys at Law; D000036360, Ohio Cat                                ; D000065304, Ohio Corn & Wheat Growers Assn; D000028115, Oil Heat Institute of Long Island       ; D000058863, Ormat Industries; D000036538, Pat Roberts for Senate                  ; D000036997, Red Hat Inc                             ; D000063387, Ships At A Distance; D000029144, Southwestern/Great American             ; D000029419, Texas Sheep & Goat Raisers Assn         ; D000029422, Texas Wheat Producers Assn              ; D000063707, Thomas Conway Attorney At Law; D000040339, University at Buffalo Medical School; D000058046, US Clean Heat & Power Assn; D000058239, ViaSat Inc; D000067724, Vicat Group; D000030999, Westat Inc                              ; D000031029, Wheat Government Relations              ; D000031038, White Hat Management                    ; D000058616, Wildcat Venture; D000031200, Zagat Survey                            "
 MOLSON COORS BREWING CO,TAP,D000027694,
 TERADATA CORP DE,TDC,D000029380,
 TRANSDIGM GROUP INC,TDG,D000070563,
 T E CONNECTIVITY LTD,TEL,D000022388,
-TEGNA INC,TGNA,,
+TEGNA INC,TGNA,,"D000051182, Tegna is a subsidiary of Gannett Co"
 TARGET CORP,TGT,,"D000000619, Target Corp; D000069807, Target Enterprises; D000057411, Target Financial Services; D000070064, Target Lodging; D000057412, Targeted Growth; D000069806, Targeted Victory; D000070549, TargetPoint Consulting"
 TIFFANY & CO NEW,TIF,,"D000040325, Tiffany & Bosco; D000030418, Tiffany & Co                            "
 T J X COMPANIES INC NEW,TJX,D000030442,
