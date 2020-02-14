@@ -16,7 +16,6 @@ def get_donation_data(some_url):
     table_rows = table.find_all('tr')[1:-1]
 
     l = []
-    k = []
 
     for tr in table_rows:
         td = tr.find_all('td')
@@ -24,7 +23,6 @@ def get_donation_data(some_url):
         l.append(row)
 
     k = ['cycle', 'total', 'democrats', 'republicans', 'pct_democrats', 'pct_republicans', 'individuals', 'pacs', 'soft_indivs', 'soft_orgs']
-    
     df = pd.DataFrame(l, columns = k)
     
     cols = df.columns
@@ -33,7 +31,6 @@ def get_donation_data(some_url):
     df['pct_democrats'] = df['pct_democrats'].div(100).round(2)
     df['pct_republicans'] = df['pct_republicans'].div(100).round(2)
     
-    
     return df
     
 # Sample call: Starbucks
@@ -41,11 +38,12 @@ def get_donation_data(some_url):
 
 # Scrap the data from OpenSecrets website and save it in the server
 ticker_comnam_id_matched = pd.read_csv("ticker_comnam_id_matched.csv")
+
 conn_string = 'postgresql://localhost/crsp'
 engine = create_engine(conn_string)
-
 conn = engine.connect()
 
+# Get the corp summary data from OpenSecrets for all firms in ticker_comnam_id_matched
 for i in range(len(ticker_comnam_id_matched)):
     try: 
         org_id = ticker_comnam_id_matched.loc[i, 'org_id']
@@ -53,17 +51,14 @@ for i in range(len(ticker_comnam_id_matched)):
 
         df = get_donation_data(org_summary_url)
 
-
+        # add firm identifiers
         df.insert(0, 'ticker', ticker_comnam_id_matched.loc[i, 'ticker'])
         df.insert(0, 'comnam', ticker_comnam_id_matched.loc[i, 'comnam'])
         df.insert(0, 'org_id', org_id)
 
         df.to_sql("org_donations", conn, schema="mschabus", if_exists='append', dtype={"cycle": Integer()}, index=False)
         
-        # print("Success", i, org_id)
-        
     except:
-        # print("Failure", i, org_id)
         pass
         
 conn.execute("ALTER TABLE nytimes OWNER TO mschabus")
