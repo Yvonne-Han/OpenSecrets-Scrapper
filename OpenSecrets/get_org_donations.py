@@ -61,5 +61,6 @@ for i in range(len(ticker_comnam_id_matched)):
     except:
         pass
         
+conn.execute("SET search_path TO mschabus")
 conn.execute("ALTER TABLE org_donations OWNER TO mschabus")
 conn.close()
